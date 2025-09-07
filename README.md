@@ -23,7 +23,7 @@ He then creates an asset with three owners:
 The asset has been created with **AssetID: 1**, with the holders (owners) as shown below.
 
 <p align="center">
-  <img src="fig2.png" class="demo-img" alt="Asset Creation"/>
+  <img src="individual prop/fig2.png" class="demo-img" alt="Asset Creation"/>
 </p>
 
 ---

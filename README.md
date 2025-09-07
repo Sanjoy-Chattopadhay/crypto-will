@@ -1,4 +1,4 @@
-# Multi-Owner (Individual Property) Will (Demonstration)
+# ERC 1155 Based Multi-Owner (Individual Property) Will Demonstration
 
 This demonstration showcases a **test version of Multi-Owner Multi-Heir Will** on Remix IDE.  
 We present the process step by step with screenshots.

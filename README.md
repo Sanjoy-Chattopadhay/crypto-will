@@ -14,7 +14,7 @@ He then creates an asset with three owners:
 - `0x4B2xxx2db` → 300 coins  
 
 <p align="center">
-  <img src="fig1.png" class="demo-img" alt="Contract Deployment"/>
+  <img src="whole property/0. asset with 500 token amount.png" class="demo-img" alt="Contract Deployment"/>
 </p>
 
 ---

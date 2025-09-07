@@ -97,4 +97,141 @@ This demonstration shows how the **Multi-Owner Multi-Heir Will** works on the te
 - ✅ Trustee-based execution  
 - ✅ Seamless transfer to heirs  
 
+# ERC721 NFT Contract with Multi-Owner Management
 
+## Overview
+
+This project demonstrates an ERC721 NFT contract implementation with multi-owner functionality and will management capabilities. The contract allows for indivisible assets with multiple owners and includes a proposal-based system for ownership changes.
+
+## Features
+
+- **Multi-Owner NFT Assets**: Create indivisible assets with multiple owners
+- **Will Management Integration**: Built-in will manager functionality
+- **Proposal-Based Ownership Changes**: Democratic voting system for ownership modifications
+- **Complete Ownership Tracking**: Full transparency of ownership details
+
+## Contract Deployment and Usage
+
+### Step 1: Contract Deployment
+
+User `0x5B3xxxdC4` deploys the ERC721 NFT Contract.
+
+<p align="center">
+  <img src="ERC721Screenshots/fig1.png" class="demo-img" alt="Contract Deployment"/>
+</p>
+
+### Step 2: Creating Indivisible Assets
+
+The owner creates an indivisible asset by calling the `createIndivisibleAsset` method, specifying the owners:
+
+**Owners:**
+- `0x5B3xxxdC4`
+- `0xAb8xxxcb2` 
+- `0x4B2xxx2db`
+
+### Step 3: Asset Information Retrieval
+
+Asset information can be retrieved using the following methods by passing the token ID:
+
+- `getIndivisibleOwners()` - Returns all owners of the asset
+- `getOwnerCount()` - Returns the total number of owners
+- `getTokenInfo()` - Returns detailed token information
+
+<p align="center">
+  <img src="ERC721Screenshots/fig2.png" class="demo-img" alt="Asset Information"/>
+</p>
+
+### Step 4: Will Manager Setup
+
+A Will Manager contract is created with address `0xC61xxxF4c` by passing the NFT address as an argument.
+
+To grant access permissions, call the `setWillManager(0xC61xxxF4c)` method, passing the will manager's contract address to enable editing capabilities for the NFT contract.
+
+<p align="center">
+  <img src="ERC721Screenshots/fig3.png" class="demo-img" alt="Will Manager Setup"/>
+</p>
+
+<p align="center">
+  <img src="ERC721Screenshots/fig4.png" class="demo-img" alt="Will Manager Configuration"/>
+</p>
+
+### Step 5: Ownership Change Proposals
+
+#### Creating a Proposal
+
+Any current owner can propose a new owner by calling the proposal method with the new proposed owner's address `0xdD8xxx148`. This action returns a unique proposal ID.
+
+<p align="center">
+  <img src="ERC721Screenshots/fig5.png" class="demo-img" alt="Creating Ownership Proposal"/>
+</p>
+
+#### Viewing Proposals
+
+Other owners can log in and view proposal details using the following methods with the proposal ID:
+
+- `getProposal()` - Returns detailed proposal information
+- `getProposalStats()` - Returns proposal statistics and voting status
+
+<p align="center">
+  <img src="ERC721Screenshots/fig6.png" class="demo-img" alt="Viewing Proposals"/>
+</p>
+
+### Step 6: Proposal Approval and Execution
+
+#### Approval Process
+
+Each owner can review the proposal details and approve the proposal. The proposal execution depends on the approval status:
+
+- Owners review proposal details
+- Each owner votes to approve or reject
+- Proposal is executed based on voting results
+
+#### Ownership Update
+
+When all owners approve the proposal, the ownership list is automatically updated:
+
+<p align="center">
+  <img src="ERC721Screenshots/fig7.png" class="demo-img" alt="Proposal Approval"/>
+</p>
+
+<p align="center">
+  <img src="ERC721Screenshots/fig8.png" class="demo-img" alt="Updated Ownership"/>
+</p>
+
+## Key Methods
+
+### Asset Management
+- `createIndivisibleAsset(address[] owners)` - Create a new multi-owner asset
+- `getIndivisibleOwners(uint256 tokenId)` - Get all owners of a token
+- `getOwnerCount(uint256 tokenId)` - Get the number of owners
+- `getTokenInfo(uint256 tokenId)` - Get detailed token information
+
+### Will Management
+- `setWillManager(address willManager)` - Set the will manager contract address
+
+### Proposal System
+- `proposeNewOwner(uint256 tokenId, address newOwner)` - Propose a new owner
+- `getProposal(uint256 proposalId)` - Get proposal details
+- `getProposalStats(uint256 proposalId)` - Get proposal statistics
+- `approveProposal(uint256 proposalId)` - Approve a proposal
+
+## Contract Addresses Used in Demo
+
+- **NFT Contract Deployer**: `0x5B3xxxdC4`
+- **Initial Owners**: 
+  - `0x5B3xxxdC4`
+  - `0xAb8xxxcb2`
+  - `0x4B2xxx2db`
+- **Will Manager Contract**: `0xC61xxxF4c`
+- **Proposed New Owner**: `0xdD8xxx148`
+
+## Workflow Summary
+
+1. **Deploy** the ERC721 NFT contract
+2. **Create** indivisible assets with multiple owners
+3. **Set up** will manager integration
+4. **Propose** ownership changes through the voting system
+5. **Approve** proposals through multi-signature process
+6. **Execute** approved changes automatically
+
+This system ensures democratic control over NFT ownership while maintaining the integrity and security of digital assets through a transparent proposal and voting mechanism.

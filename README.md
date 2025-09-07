@@ -1,6 +1,6 @@
 # Multi-Owner (Individual Property) Will (Demonstration)
 
-This demonstration showcases a **dummy version of Multi-Owner Multi-Heir Will** on the testnet.  
+This demonstration showcases a **test version of Multi-Owner Multi-Heir Will** on Remix IDE.  
 We present the process step by step with screenshots.
 
 ---
@@ -14,7 +14,7 @@ He then creates an asset with three owners:
 - `0x4B2xxx2db` → 300 coins  
 
 <p align="center">
-  <img src="whole property/0. asset with 500 token amount.png" class="demo-img" alt="Contract Deployment"/>
+  <img src="individual prop/fig1.png" class="demo-img" alt="Contract Deployment"/>
 </p>
 
 ---
@@ -31,10 +31,17 @@ The asset has been created with **AssetID: 1**, with the holders (owners) as sho
 ## Setting the WillManager
 The creator of **AssetID: 1** sets the `WillManager` with the NFT address `0xC7BxxxB94` and deploys.  
 Thus, the `WillManager` gets an address `0xfB7xxx7e4`.  
+
+
+<p align="center">
+  <img src="individual prop/fig2.png" class="demo-img" alt="WillManager Setup"/>
+</p>
+
+
 Thereafter, **all the owners approve the WillManager** for managing their cryptowill.
 
 <p align="center">
-  <img src="fig3.png" class="demo-img" alt="WillManager Setup"/>
+  <img src="individual prop/fig2b.png" class="demo-img" alt="WillManager Setup"/>
 </p>
 
 ---
@@ -52,7 +59,7 @@ Now the `WillManager` creates a Multi-Owner Multi-Heir Will with **individual sh
 - **Required Trustee Signatures:** 2  
 
 <p align="center">
-  <img src="fig4.png" class="demo-img" alt="Will Creation"/>
+  <img src="individual prop/fig3.png" class="demo-img" alt="Will Creation"/>
 </p>
 
 ---
@@ -63,8 +70,12 @@ the transfer depends on the Trustees' signatures.
 Below, the owner does not respond within the due time.
 
 <p align="center">
-  <img src="fig5.png" class="demo-img" alt="Trustee Execution"/>
+  <img src="individual prop/fig4.png" class="demo-img" alt="Trustee Execution"/>
 </p>
+<p align="center">
+  <img src="individual prop/fig5.png" class="demo-img" alt="Trustee Execution"/>
+</p>
+
 
 ---
 
@@ -73,7 +84,7 @@ After the Trustees sign, the death is approved, and the transfer is seamless.
 The heir’s account gets credited successfully.
 
 <p align="center">
-  <img src="fig6.png" class="demo-img" alt="Heir Credit"/>
+  <img src="individual prop/fig5.png" class="demo-img" alt="Heir Credit"/>
 </p>
 
 ---

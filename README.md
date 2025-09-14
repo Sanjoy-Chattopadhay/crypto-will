@@ -1,4 +1,4 @@
-# ERC721 NFT Contract with Multi-Owner Management
+# ERC721 NFT Contract with Owner Management
 
 ## Overview
 
